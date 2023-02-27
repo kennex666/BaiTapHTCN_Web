@@ -21,11 +21,11 @@
                     <td>
                         <lable for="emailTo">To</lable>
                     </td>
-                    <td><input type="text" name="txtTo" readonly="readonly" id="emailTo" size="20" value="Example Cafe"></td>
+                    <td><input required type="text" name="txtTo" readonly="readonly" id="emailTo" size="20" value="Example Cafe"></td>
                 </tr>
                 <tr>
                     <td><label for="emailFrom">From</lable></td>
-                    <td> <input type="email" name="txtFrom" id="emailFrom" size="20" tabindex="1" maxlength="250"></input></td>
+                    <td> <input required type="email" name="txtFrom" id="emailFrom" size="20" tabindex="1" maxlength="250"></input></td>
                 </tr>
                 <tr>
                     <td><label for="message">Message</label></td>
@@ -33,7 +33,88 @@
                 </tr>
             </table>
         </fieldset>
+
+        <fieldset>
+            <legend>How you found us:</legend>
+            <table>
+                <tr>
+                    <td><label for="askFound">How did you hear of us</label></td>
+                    <td><select id="askFound" name="askFound"><option>Google</option><option>Facebook</option></select></td>
+                </tr>
+                <tr>
+                    <td><label for="chkNews">Newsletter</label></td>
+                    <td><input type="checkbox" id="chkNews" name="chkNews">Ensure this box is checked if you would like to receive email updates</td>
+                </tr>
+            </table>
+        </fieldset>
+        <button type="submit" id="submit" value="submit">Send message</button>
     </form>
+    <form action="#" method="post">
+        <fieldset>
+
+            <legend><i>Contact Information</i></legend>
+            <table>
+                <tr>
+                    <td><label for="txtFirst">First Name:</label></td>
+                    <td><input type="text" required id="txtFirst" name="txtFirst"> </td>
+                </tr>
+                <tr>
+                    <td><label for="txtLast">Last Name:</label></td>
+                    <td><input type="text" id="txtLast" name="txtLast"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtEmail">Email:</label></td>
+                    <td><input type="email" id="txtEmail" name="txtEmail"> </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend><i>Competition Question</i></legend>
+            <table>
+                <tr>
+                    <td><label for="qst1">How tall is the Eiffel Tower in Paris, France?</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="qst1" name="qst1">584 ft
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="qst1" name="qst1">784 ft
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="qst1" name="qst1">984 ft
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="qst1" name="qst1">1184 ft
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend><i>Tiebreaker Question</i></legend>
+            <table>
+                <tr>
+                    <td><label for="txtDes">In 25 words or less, say why you would like to win $10,000:</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea type="text" id="txtDes" name="txtDes" cols="50" rows="10"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend><i>Enter Competition</i></legend>
+            <table>
+                <tr>
+                    <td><button type="submit" id="submit" value="submit">Enter Competition</button></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
 
 </body>
 
