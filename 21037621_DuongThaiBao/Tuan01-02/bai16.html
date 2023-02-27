@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Travel reservation form</h1>
+    <h2>* denotes mandotory</h2>
+    <form action="" method="POST">
+        <label for="txtName">Fullname*:</label>
+        <br>
+        <input type="text" id="txtName" name="txtName" placeholder="FirstName LastName" required>
+        <br>
+        <label for="txtEmail">Email address*:</label>
+        <br>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="EMAIL_ADDRESS" required>
+        <br>
+        <label for="sellectTour">Sellect Tour Package*:</label>
+        <br>
+        <select id="sellectTour" name="sellectTour" required>
+            <option>Goa</option>
+            <option>Goa1</option>
+            <option>Goa2</option>
+            <option>Goa3</option>
+        </select>
+        <br>
+        <label for="input_date">Arrival date*:</label>
+        <br>
+        <input type="date" id="input_date" name="input_date" required>
+        <br>
+        <label for="txtNumberPerson">Number of persons*:</label>
+        <br>
+        <input type="number" id="txtNumberPerson" name="txtNumberPerson" required placeholder="NaN">
+        <br>
+        <label for="chkAvail">What would you want to avail?*</label>
+        <br> Boarding <input type="checkbox" require id="chkAvail" name="chkAvail">
+        <br> Fooding <input type="checkbox" required id="chkAvail" name="chkAvail">
+        <br> Sight seeing <input type="checkbox" required id="chkAvail" name="chkAvail">
+        <br>
+        <label for="txtCoupon">Discount Coupon Code:</label>
+        <br>
+        <input type="text" id="txtCoupon" name="txtCoupon" placeholder="Coupon here">
+        <br>
+        <label for="radRequired">Terms and condittion*</label>
+        <br>
+        <input id="radRequired" name="radRequired" required type="radio"> I agree
+
+        <input id="radRequired" name="radRequired" required type="radio"> I disagree
+        <br>
+        <button type="submit" value="submit">Complete reservation</button>
+    </form>
+</body>
+
+</html>
