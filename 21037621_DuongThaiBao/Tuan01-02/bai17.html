@@ -70,9 +70,6 @@
                         </select></td>
                         <td><label for="year">Year: </label></td>
                         <td><input type="number" id="year" name="year" maxlength="4" value="2000"></td>
-                        <td>
-                            <input type="month" value="January">
-                        </td>
                     </tr>
                 </table>
                 <p>
@@ -101,9 +98,37 @@ State/Zip:
                             <label for="chkProduct">If so, what products, besides the one you are ordering, might you be interested in purchasing in the future? (Check all that apply.)</label>
                         </li>
                         <table>
-                            <tr></tr>
+                            <tr>
+                                <td><input type="checkbox" id="chkProduct" name="chkProduct">VCR</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="chkProduct" name="chkProduct">Big Screen TV</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="chkProduct" name="chkProduct">Audio Equipment</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="chkProduct" name="chkProduct">Video Equipment</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="chkProduct" name="chkProduct">Camera Equipment</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="chkProduct" name="chkProduct">Other  
+                                <input type="text" id="chkProduct" name="chkProduct" placeholder="Please list:">
+                                </td>
+                            </tr>
                         </table>
+                        <p>
+                    <li>
+                        <label for="txtQuestion">Do you have any questions, comments or suggestions before proceeding to the Order Form?</label>
+                    </li>
+                    <textarea type="text" cols="30" rows="4" id="txtQuestion" name="txtQuestion">Your Input:</textarea>
         </ol>
+        <div align="center">
+            <button type="submit" id="submit" style="margin-right: 30px;">Send</button>
+            <button  id="clearForm">Clear Form</button>
+        </div>
     </form>
 
 </body>
