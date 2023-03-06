@@ -1,0 +1,27 @@
+#headBar {
+    display: flex;
+    width: 1450px;
+    height: 70px;
+    justify-content: space-evenly;
+}
+
+#banner {
+    display: flex;
+}
+
+#menuBar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1450px;
+}
+
+.ul-head {
+    display: flex;
+    list-style-type: none;
+}
+
+.menuBarBtn {}
+
+.menuBarSearch {}
+
+.menuBtn {}
