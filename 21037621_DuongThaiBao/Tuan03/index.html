@@ -10,64 +10,271 @@
 </head>
 
 <body>
-    <!---
-        Header
-    -->
-    <div id="headBar">
-        <div class="headBarLeft">
-            <ul class="ul-head">
-                <li class="headItemLeft">Shop </li>
-                <li class="headItemLeft">Offers</li>
-                <li class="headItemLeft">Our story</li>
-                <li class="headItemLeft">Blog</li>
-            </ul>
+
+    <div id="navBar">
+        <div id="navBar__left">
+            <div>Shop</div>
+            <div>Offers</div>
+            <div>Our story</div>
+            <div>Blog</div>
         </div>
-
-        <ul class="ul-head">
-            <li class="headItem">
-                <a href="#"><img class="headItem" src="img/img-logo.png"></a>
-            </li>
-        </ul>
-
-        <ul class="ul-head">
-            <li class="headItem">
-                <input type="text" name="search" placeholder="Search Product...">
-            </li>
-            <li class="headItem">
-                <a href="#"><img class="headItem" src="img/btn-cart.png"></a>
-            </li>
-            <li class="headItem">
-                <a href="#"><img class="headItem" src="img/img-avt.png"></a>
-            </li>
-        </ul>
-
-    </div>
-
-    <!-- <div id="banner">
-        <img src="img/img-bg.png">
-    </div> -->
-
-    <!-- <div id="menuBar">
-        <div class="menuBarBtn">
-            <span class="menuBtn">All products</span>
-            <span class="menuBtn">Face</span>
-            <span class="menuBtn">Body</span>
+        <div id="navBar__center">
+            <div><img alt="Logo" src="img/img-logo.png"/></div>
         </div>
-        <div class="menuBarSearch">
-            <input name="input" type="text">
-            <select name="select" id="select">
-                <option value="default">Sort By</option>
-                <option value="i">Increase</option>
-                <option value="d">Decrease</option>
-            </select>
+        <div id="navBar__right">
+            <div><input type="text" id="txtSearchNav" value="" placeholder="Search product..."/></div>
+            <div><img alt="Cart" src="img/btn-cart.png"></div>
+            <div><img alt="Cart" src="img/img-avt.png"></div>
         </div>
     </div>
-    <div id="product">Product</div>
-    <div id="sideBar">SideBar</div> -->
+    
+    <div id="banner">
+        <div><img alt="Banner" src="img/img-bg.png"/></div>
+        <div id="banner__text">
+            <h1 class="banner__lblH1">Gift for your skin</h1>
+            <h3 class="banner__lblH3">Aliquip fugiat ipsum nostrud ex et eu incididunt quis minim dolore excepteur volptate</h3>
+        </div>
+    </div>
+
+    <div id="product"> 
+        <div id="product__bar">
+            <div class="product__barLeft">
+                <div class="product__btn-selected">All products</div>
+                <div class="product__btn">Face</div>
+                <div class="product__btn">Body</div>
+            </div>
+            <div class="product__space"></div>
+            <div class="product__barRight">
+                <div class="product__btn-search">
+                    <input type="text" name="Search" value="" placeholder="Search product"/>
+                </div>
+                <div class="product__btn-filter">
+                    <select name="ProductFilter">
+                        <option value="Filter">Sort by</option>
+                        <option value="Filter">A-Z</option>
+                        <option value="Filter">Z-A</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="product__show__center">
+
+            <div id="product__show">
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="product__show">
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="product__show">
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__item">
+                    <div class="product__img">
+                        <label for="bestSeller" class="product__show__bestseller">Best-Seller</label>
+                        <img alt="Product" src="img/img-product1.png"/>
+                    </div>
+    
+                    <div class="product__info">
+                        <h4 class="product__title">Product title</h4>
+                        <p class="product__des">Lorem ipsum dolor sit amet</p>
+                        <div class="product__show__buy">
+                            <div class="product__tagPrice">
+                                <h1 class="product__tagPrice__h1">$19</h1> <h3 class="product__tagPrice__h3">$34</h3>
+                            </div>
+                            <img alt="Shopping" src="img/btn-shop.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 
-<footer id="footer">
-    Footer
-</footer>
 
 </html>
