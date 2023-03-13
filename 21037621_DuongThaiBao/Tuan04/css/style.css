@@ -1,17 +1,15 @@
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #wrapper {
     display: flex;
-    justify-content: center;
 }
 
 #container {
     display: flex;
-    justify-content: space-between;
-    width: 1440px;
-}
-
-#center {
-    width: 910px;
-    background-color: bisque;
+    width: 1480px;
 }
 
 #right {
@@ -20,7 +18,7 @@
 }
 
 #left {
-    width: 90px;
+    width: 155px;
     height: 870px;
     display: flex;
     flex-direction: column;
@@ -48,4 +46,160 @@
 
 #setting {
     margin-top: 36px;
+}
+
+#center {
+    width: 907px;
+    background-color: bisque;
+}
+
+#center-container {
+    display: flex;
+    margin-top: 45px;
+    margin-left: 40px;
+    margin-right: 40px;
+    flex-direction: column;
+}
+
+#center__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 830px;
+    margin-bottom: 35px;
+    height: 23px;
+}
+
+#center__title h2 {
+    margin: 0px;
+}
+
+.btn-time {
+    display: flex;
+    width: 90px;
+    height: 35px;
+    border: solid #F22128 1px;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-time__content {
+    display: flex;
+    color: #F22128;
+}
+
+.btn-time__point {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #F22128;
+}
+
+#center__details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-user {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    background-color: #E65F62;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: small;
+    margin-right: 17px;
+}
+
+.btn-user__circleimage {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFF;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-user span {
+    margin-left: 5px;
+}
+
+.btn-user__circleimage img {
+    opacity: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.meeting-details-calendar {
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+
+.meeting-details-calendar img {
+    margin-right: 10px;
+}
+
+.meeting-details-calendar span {
+    margin-right: 13px;
+}
+
+#center__allMeeting {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+}
+
+.meeting-center {
+    position: relative;
+    display: flex;
+}
+
+.meeting-teacher {
+    width: max-content;
+    display: flex;
+}
+
+.circle-green-online {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 7px;
+    background-color: #1DD75B;
+}
+
+.bar-meeting-title {
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    top: 10px;
+    left: 25px;
+    width: 93%;
+}
+
+.lbl-title-name-bar {
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    width: max-content;
+}
+
+.mic {
+    display: flex;
+}
+
+#meeting-row {
+    display: block;
 }
