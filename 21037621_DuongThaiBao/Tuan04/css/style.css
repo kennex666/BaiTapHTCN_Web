@@ -14,7 +14,6 @@
 
 #right {
     width: 440px;
-    background-color: aqua;
 }
 
 #left {
@@ -50,7 +49,6 @@
 
 #center {
     width: 907px;
-    background-color: bisque;
 }
 
 #center-container {
@@ -152,7 +150,7 @@
 #center__allMeeting {
     display: flex;
     margin-top: 40px;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .meeting-center {
@@ -163,6 +161,7 @@
 .meeting-teacher {
     width: max-content;
     display: flex;
+    position: relative;
 }
 
 .circle-green-online {
@@ -201,5 +200,196 @@
 }
 
 #meeting-row {
-    display: block;
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+
+}
+
+.bar-meeting-title-small {
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    top: 10px;
+    left: 25px;
+    width: 93%;
+}
+
+.lbl-title-name-bar-small {
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    width: max-content;
+    font-size: 13px;
+}
+
+.mic-small {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+
+}
+
+#center__bar-meeting{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#center__bar-meeting *{
+    margin-left: 15px;
+}
+
+.btn-endMeeting{
+    width: 125px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #F22128;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-container{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 33px;
+    margin-right: 70px;
+}
+
+#right__bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn-add{
+    width: 70px;
+    height: 33px;
+    border-radius: 3px;
+    border: #E65F62 1px solid;
+    color: #E65F62;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#right__people{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.people__bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pb__nameImage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: smaller;
+}
+.pb__nameImage img{
+    margin-right: 10px;
+}
+
+.pb__bar{
+    display: flex;
+    flex-direction: row;
+}
+
+.pb__bar *{
+    margin-right: 10px;
+}
+
+.pb__bar img{
+    width: 100%;
+    height: 100%;
+}
+
+.pb_threedot{
+    color: gray;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#right__chat{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat{
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+}
+.chat__message{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.chat__head{
+    display: flex;
+    align-items: center;
+}
+
+.cm__name{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.cm__time{
+    margin-left: 10px;
+    color: gray;
+}
+
+.message{
+    margin-left: 45px;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+}
+
+.send_message{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message_input{
+    width: 270px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #F8F9FA;
+    border-radius: 5px;
+    border-style: none;
 }
