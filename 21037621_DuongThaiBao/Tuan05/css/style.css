@@ -1,0 +1,262 @@
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+    flex-direction: column;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-bar__left,
+.nav-bar__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar__left img {
+    margin-right: 40px;
+}
+
+.nav-bar__left div {
+    margin-right: 10px;
+}
+
+.nav-bar__selection,
+.nav-bar__selection-choice {
+    padding: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.nav-bar__selection-choice {
+    padding: 10px;
+    color: #00BDD6;
+    font-weight: bold;
+    border-bottom: solid;
+    border-color: #00BDD6;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.nav-bar__right input {
+    width: 330px;
+    height: 35px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #F3F4F6;
+    padding-left: 20px;
+}
+
+.nav-bar__right * {
+    margin-right: 25px;
+}
+
+#container__center {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+#nav-here {
+    font-size: smaller;
+    color: #9095A0;
+}
+
+.nav-here__here {
+    color: #000;
+}
+
+#product-infor {
+    margin-top: 20px;
+}
+
+.product-infor__rateAndShare__left {
+    display: flex;
+    align-items: center;
+}
+
+.product-infor__rateAndShare__left img {
+    height: 20px;
+}
+
+.product-infor__rateAndShare__left span {
+    margin-left: 5px;
+}
+
+.product-infor__rateAndShare__left__gray {
+    color: #9095A0;
+}
+
+#product-infor h1 {
+    font-size: 50px;
+}
+
+.product-infor__rateAndShare {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.product-infor__rateAndShare__left,
+.product-infor__rateAndShare__right {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.product-infor__rateAndShare__right img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.product-infor__rateAndShare__right span {
+    margin-right: 45px;
+}
+
+#product-image {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.product-image__grid__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.product-image__grid__row img {
+    margin-right: 15px;
+}
+
+.product-image__grid__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#product-des-buy {
+    display: grid;
+    grid-template-areas: "A A A B";
+    margin-top: 35px;
+    padding-bottom: 40px;
+    border: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #F3F4F6;
+}
+
+#product-des h2 {
+    margin-bottom: 30px;
+}
+
+#product-des p {
+    margin-bottom: 30px;
+    padding-right: 100px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.product-des-col {
+    display: grid;
+    grid-template-areas: "A B" "C D" "E F";
+    width: 390px;
+    font-size: 14px;
+}
+
+.product-des-col * {
+    margin-bottom: 15px;
+}
+
+.pro-des-col-img {
+    display: flex;
+    align-items: center;
+}
+
+.pro-des-col-img * {
+    margin-right: 7px;
+    margin-bottom: 0px;
+}
+
+#product-buy {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F3F4F6;
+    padding: 25px;
+}
+
+#product-buy h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-align: end;
+    color: #00BDD6;
+}
+
+#product-buy select {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 15px;
+    background-color: #F3F4F6;
+    border-style: none;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.product__price-shop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-buy,
+.btn-addtocart {
+    height: 45px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #00BDD6;
+    border-style: solid;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-buy {
+    background-color: #00BDD6;
+    color: #FFF;
+}
+
+.btn-addtocart {
+    background-color: #FFF;
+    color: #00BDD6
+}
+
+#suggest-product {
+    margin-top: 30px;
+}
