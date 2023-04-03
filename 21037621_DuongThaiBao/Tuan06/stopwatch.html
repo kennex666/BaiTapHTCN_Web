@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        var innerFlag = '<li type="1" class="flag-list">{0}</li>';
+        var $ = document;
+        var miliseconds = 0;
+        var seconds = 0;
+        var minute = 0;
+        var isResume = 0;
+        var isStart = 0;
+        var objFlag = [];
+
+        var countingMiliSec;
+
+        function countMiliSec() {
+            var milisecDoc = $.getElementsByClassName("milisecond")[0];
+
+            miliseconds += 1;
+
+            milisecDoc.innerText = miliseconds < 10 ? '0' + miliseconds : miliseconds;
+            if (miliseconds == 99) {
+                miliseconds = 0;
+                countSec();
+
+            }
+        }
+
+        function countSec() {
+            var secDoc = $.getElementsByClassName("second")[0];
+            seconds += 1;
+            secDoc.innerText = seconds < 10 ? '0' + seconds : seconds;
+            if (seconds == 59) {
+                countMin();
+                seconds = 0;
+            }
+        }
+
+        function countMin() {
+            var minDoc = $.getElementsByClassName("minute")[0];
+            minute += 1;
+            minDoc.innerText = minute < 10 ? '0' + minute : minute;
+        }
+
+        function clearTextClock() {
+            var milisecDoc = $.getElementsByClassName("milisecond")[0];
+            var secDoc = $.getElementsByClassName("second")[0];
+            var minDoc = $.getElementsByClassName("minute")[0];
+            milisecDoc.innerHTML = '00';
+            secDoc.innerHTML = '00';
+            minDoc.innerHTML = '00';
+            miliseconds = 0;
+            seconds = 0;
+            minute = 0;
+        }
+
+        function startIntervalClock() {
+            countingMiliSec = setInterval(
+                countMiliSec,
+                10
+            );
+        }
+
+        function startWatch() {
+            var btnStart = $.getElementsByClassName("btn-start")[0];
+            var btnStop = $.getElementsByClassName("btn-stop")[0];
+            var btnClear = $.getElementsByClassName("btn-clear")[0];
+            var btnFlag = $.getElementsByClassName("btn-flag")[0];
+            if (isResume == 0)
+                clearTextClock();
+            btnStart.disabled = true;
+            startIntervalClock()
+            isStart = 1;
+            btnStop.disabled = false;
+            btnClear.disabled = false;
+            btnFlag.disabled = false;
+
+        }
+
+        function clearWatch() {
+            var btnStop = $.getElementsByClassName("btn-stop")[0];
+            var btnStart = $.getElementsByClassName("btn-start")[0];
+            var btnClear = $.getElementsByClassName("btn-clear")[0];
+            var btnFlag = $.getElementsByClassName("btn-flag")[0];
+
+            var innerFlagHtml = $.getElementsByClassName("flag")[0].getElementsByTagName('ol')[0];
+            innerFlagHtml.innerHTML = '';
+
+            objFlag = [];
+
+            clearTextClock();
+            clearInterval(countingMiliSec);
+            btnStop.innerHTML = "Stop";
+            isResume = 0;
+            btnStart.disabled = false;
+            btnClear.disabled = true;
+            btnStop.disabled = true;
+            btnFlag.disabled = true;
+
+        }
+
+        function stopWatch() {
+            var btnStop = $.getElementsByClassName("btn-stop")[0];
+            var btnStart = $.getElementsByClassName("btn-start")[0];
+            if (isResume == 1) {
+                btnStop.innerHTML = "Stop";
+                isResume = 0;
+                startIntervalClock();
+            } else {
+                btnStop.innerHTML = "Resume";
+                isResume = 1;
+                clearInterval(countingMiliSec);
+            }
+        }
+
+        function flagWatch() {
+            var milisecDoc = $.getElementsByClassName("milisecond")[0];
+            var secDoc = $.getElementsByClassName("second")[0];
+            var minDoc = $.getElementsByClassName("minute")[0];
+            var innerFlagHtml = $.getElementsByClassName("flag")[0].getElementsByTagName('ol')[0];
+            let strTemp = minDoc.innerHTML + ":" + secDoc.innerHTML + "." + milisecDoc.innerHTML;
+
+            temp = innerFlag.replace("{0}", strTemp);
+            objFlag.push(temp);
+            innerFlagHtml.innerHTML = objFlag.join("");
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-clock">
+            <div class="stop-watch">
+                <div class="watch">
+                    <div class="clock">
+                        <div class="minute">00</div>
+                        <div class="dot2">:</div>
+                        <div class="second">00</div>
+                        <div class="dot-container">
+                            <div class="dot">.</div>
+                        </div>
+                        <div class="milisecond">00</div>
+                    </div>
+                    <div class="controller">
+                        <button class="btn-start" onclick="startWatch()">Start</button>
+                        <button class="btn-stop" disabled onclick="stopWatch()">Stop</button>
+                        <button class="btn-clear" disabled onclick="clearWatch()">Clear</button>
+                        <button class="btn-flag" disabled onclick="flagWatch()">Flag</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flag">
+                <ol>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
