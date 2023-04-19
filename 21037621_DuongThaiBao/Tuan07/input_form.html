@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-input {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .form-input1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        
+        .form-input1 input {
+            margin-left: 10px;
+        }
+        
+        .inputcol {
+            padding: 40px 15px 20px 15px;
+            border: 1px solid black;
+        }
+        
+        .space {
+            height: 250px;
+        }
+        
+        #btnSubmit {
+            width: 100%;
+        }
+    </style>
+    <script>
+        checkNumber = (noti) => {
+            str = document.getElementById('txtNumber').value;
+            if (str.match(/\D/g)) {
+                if (noti) alert("Not a phone number! Please check again!");
+                return false;
+            } else {
+                if (str.length != 10) {
+                    if (noti) alert("Not a phone number! Please check again!");
+                    return false;
+                } else {
+                    if (noti) alert("Accepted!");
+                    return true;
+                }
+            }
+        }
+        checkString = (noti) => {
+            str = document.getElementById('txtString').value;
+            if (str.match(/[^A-Za-z ]/g)) {
+                if (noti) alert("Not a character (Alphabet)! Please check again!");
+                return false;
+            } else {
+                if (noti) alert("Accepted!");
+                return true;
+            }
+        }
+        submitMe = () => {
+            if (!checkNumber()) {
+                alert("Register failed! Phone number is not valid!");
+                return;
+            }
+            if (!checkString()) {
+                alert("Register failed! Name is not valid!");
+                return;
+            }
+            alert("Register successfully!");
+        }
+    </script>
+</head>
+
+<body class="body">
+    <div class="space"></div>
+    <div class="form-input">
+        <div class="inputcol">
+            <div class="form-input1">
+                <label for="txtString">Input name:</label><input id="txtString" name="txtString" onchange="checkString(false)" type="text" placeholder="abcdef">
+            </div>
+            <br>
+            <div class="form-input1">
+                <label for="txtNumber">Input number:</label><input id="txtNumber" name="txtNumber" onchange="checkNumber(false)" type="text" placeholder="123456">
+            </div>
+            <br>
+            <button id="btnSubmit" onclick="submitMe()">Submit</button>
+            <p align="center">Press enter on field to check result</p>
+        </div>
+    </div>
+</body>
+
+</html>

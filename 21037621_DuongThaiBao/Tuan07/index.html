@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTra Thường kì - Dương Thái Bảo | 21037621</title>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="d-flex justify-content-between align-items-end border-bottom border-dark">
+            <img src="images/doctor.jpg" class="float-left" alt="Images">
+            <h2 class="pb-3 text-primary">Tư Vấn Online</h2>
+            <img src="images/doctor.jpg" class="float-right" alt="Images">
+        </div>
+        <div class="pb-2 pt-2 pl-5 nav nav-tabs border-dark">
+            <a class="nav-item nav-link" href="#">Trang chủ</a>
+            <button type="button" class="nav-item nav-link" data-toggle="modal" data-target="#modalDatLich">Đặt lịch</button>
+        </div>
+
+        <div class="modal fade" id="modalDatLich">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="myForm">
+                    <div class="modal-header">
+                        <h4>Đặt lịch khám Online</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="alert alert-danger d-none" id="errorMessage"></div>
+                        <div class="form-group">
+                            <label for="txtMa"><b>Mã bệnh nhân</b></label>
+                            <input class="form-control" type="text" id="txtMa" placeholder="Ma benh nhan" required>
+                            <div class="text-danger"><i>(*) BN-YYYYY</i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass"><b>Mật khẩu</b></label>
+                            <input class="form-control" type="password" id="txtPass" required>
+                            <div class="text-danger"><i>(*)</i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDate"><b>Ngày khám</b></label>
+                            <input type="date" id="inputDate" class="form-control" required> 
+                            <div class="text-danger"><i>(*)</i></div>
+                        </div>
+                        <label><b>Khám theo yêu cầu</b></label>
+                        <div class="form-group pl-1">
+                            <input class="checkBox-service" id="chk-tyc" type="checkbox"> Khám theo yêu cầu
+                            <input class="checkBox-service" id="chk-nt" type="checkbox"> Điều trị ngoại trú
+                            <input class="checkBox-service" id="chk-bs" type="checkbox"> Bác sĩ theo yêu cầu
+                        </div>
+                        <div class="form-group">
+                            <label for="cboCK">Chuyên khoa</label>
+                            <select class="form-control" id="cboCK">
+                                <option>Ngoại tổng quát</option>
+                                <option>Nhi</option>
+                                <option>Nội tổng quát</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" id="btnSubmit">Đặt lịch</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="btnClose" data-dismiss="modal">Close</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section class="pb-4"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã bệnh nhân</th>
+                    <th>Mật khẩu</th>
+                    <th>Ngày khám</th>
+                    <th>Phụ thu dịch vụ</th>
+                    <th>Chuyên khoa</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2 class="text-center">21037621 - Dương Thái Bảo - DHKTPM17B</h2>
+    </section>
+</body>
+</html>
