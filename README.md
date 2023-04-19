@@ -6,3 +6,9 @@ Nơi lưu trữ bài tập Hệ thống công nghệ Web
 * Sinh viên thực hiện: Dương Thái Bảo
 * Mã số sinh viên: 21037621
 * Nhóm thực hành: 1
+
+# Live repo
+
+* [Week 5](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan05)
+* [Week 6](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan06)
+* [Week 7](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan07)
