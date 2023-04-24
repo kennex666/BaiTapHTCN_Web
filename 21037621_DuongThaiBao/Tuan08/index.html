@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Ôn tập CK - Dương Thái Bảo</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row bg-info pb-5">
+            <div class="col-12 d-flex flex-row justify-content-center">
+                <h1 class="text-danger ">Header</h1>
+            </div>
+        </div>
+        <div class="row bg-success navbar navbar-expand">
+            <a class="nav-item nav-link" href="">Link</a>
+            <a class="nav-item nav-link" href="">Link</a>
+            <a class="nav-item nav-link" href="">Link</a>
+            <a class="nav-item nav-link" href="">Link</a>
+        </div>
+        <div class="row">
+            <div class="col-2 bg-dark pr-0">
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="" data-toggle="modal" data-target="#modaldk">Form đăng kí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Link</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Link</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Link</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Link</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-10 pl-0 pr-0">
+                <table class="table table-info">
+                    <thead>
+                        <th>Mã</th>
+                        <th>Tên</th>
+                        <th>Ngày</th>
+                        <th>Loại sản phẩm</th>
+                        <th>Hình thức</th>
+                        <th>Loại</th>
+                        <th>Thuế</th>
+                    </thead>
+                    <tbody id="tblData">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 bg-info pt-2 pb-2">
+                21037621 - Dương Thái Bảo
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modaldk">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Quản lí sản phẩm</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    
+                    <form id="myForm">
+                        <div id="errMsg" class="alert alert-danger mb-4 d-none">Error message</div>
+                        <div class="row form-group">
+                            <label class="col-2" name="txtMa">Mã sản phẩm</label>
+                            <input class="col-9" class="form-control" type="text" id="txtMa" name="txtMa">
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-2"></label>
+                            <span>*</span>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-2" name="txtName">Tên</label>
+                            <input class="col-9" class="form-control" type="text" id="txtName" name="txtName">
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-2" name="txtDate">Ngày</label>
+                            <input class="col-9" class="form-control" type="date" id="txtDate" name="txtDate">
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-2" name="txtType">Loại</label>
+                            <select class="col-9" class="form-control" id="txtType" name="txtType">
+                                <option value="5%">Bánh ngọt</option>
+                                <option value="10%">Nước ngọt</option>
+                                <option value="15%">Bia</option>
+                            </select>
+                        </div>
+
+                        <div class="row form-group">
+                            <label class="col-2" name="txtVAT">Thuế</label>
+                            <input class="col-9" class="form-control disabled" type="text" id="txtVAT" name="txtVAT" value="5%" disabled>
+                        </div>
+
+                        <div class="row form-group">
+                            <p class="col-2">Thanh toán</p>
+                            <div class="col-9">
+                                <div class="row d-flex align-items-center">
+                                    <input name="group-rad-payment" class="mr-1" type="radio" id="radOnline" value="online" checked>Online
+                                    <input name="group-rad-payment" class="ml-3 mr-1" type="radio" id="radOffline" value="offline">Offline
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row form-group">
+                            <p class="col-2">Loại hàng hóa</p>
+                            <div class="col-9">
+                                <div class="row d-flex align-items-center">
+                                    <input name="group-chk-lhh" class="mr-1" type="checkbox" id="chkNK" value="online" checked>Nhập khẩu
+                                    <input name="group-chk-lhh" class="ml-3 mr-1" type="checkbox" id="chkXK" value="offline">Xuất khẩu
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" id="btnNhap" class="btn btn-dark">Nhập kho</button>
+                            <button type="button" class="btn btn-dark ml-2" id="btnClose" data-dismiss="modal">Hủy</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>21037621 - Dương Thái Bảo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
