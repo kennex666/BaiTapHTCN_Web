@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Dương Thái Bảo - 21037621</title>
+    <script>
+        var stt = 0;
+        $ = document;
+        window.onload = () => {
+            var form = $.getElementById("myForm");
+            form.onsubmit = (e) => {
+                e.preventDefault();
+                let ma = $.getElementById("txtMa").value;
+                if (!ma.match(/^([\d]{10})$/)) {
+
+                    msg.innerHTML = "Mã phải chứa 10 chữ số và bắt buộc nhập!";
+                    msg.classList = "alert alert-danger";
+                    return;
+                }
+                let ten = $.getElementById("txtTen").value;
+                if (!ten.match(/^([A-Z][a-z]*)([ ][A-Z][a-z]*)*$/)) {
+
+                    msg.innerHTML = "Tên viết hoa chữ cái đầu từ.";
+                    msg.classList = "alert alert-danger";
+                    return;
+                }
+                let ngay = $.getElementById("txtNgay").value;
+
+                let ngayHienTai = new Date();
+                
+                let ngayDK = new Date(ngay);
+                ngayDK.setDate(ngayDK.getDate() - 7);
+
+                if (ngayDK < ngayHienTai){
+                    msg.innerHTML = "Ngày đăng kí phải sau 7 ngày.";
+                    msg.classList = "alert alert-danger";
+                    return;
+                }
+
+                let email = $.getElementById("txtEmail").value;
+                if (!email.match(/^([A-Za-z][A-Za-z0-9]*)(@iuh\.edu\.vn)$/)) {
+                    msg.innerHTML = "Email phải bắt đầu bằng chữ, có thể có số ở sau và không chứa kí tự đặc biệt.";
+                    msg.classList = "alert alert-danger";
+                    return;
+                }
+                let sdt = $.getElementById("txtSDT").value;
+                if (!sdt.match(/^([\d]{10})$/)) {
+                    msg.innerHTML = "Số điện thoại phải có 10 chữ số!";
+                    msg.classList = "alert alert-danger";
+                    return;
+                }
+
+                let tr = $.createElement("tr");
+                tr.innerHTML = "<tr> <td>" + ++stt +"</td> <td>"+ ma +"</td> <td>" + ten +"</td> <td>" + ngay +"</td> <td>" + email + "</td> <td>"+ sdt +"</td> </tr>"
+                $.getElementById("dataModel")
+
+                $.getElementById("dataModel").appendChild(tr);
+
+                btnClose.click()
+                msg.classList = "alert alert-danger d-none";
+                form.reset();
+            }
+            var btnClose = $.getElementById("btnClose");
+
+            var btnSubmit = $.getElementById("btnSubmit");
+            var msg = $.getElementById("msgErr");
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="../images/logo.PNG" alt="" srcset="">
+            </div>
+            <div class="col-9 d-flex flex-column justify-content-center align-items-center">
+                <h4 class="text-warning">ĐOÀN THANH NIÊN THÀNH PHỐ HỒ CHÍ MINH</h4>
+                <h5 class="text-danger">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="nav table-info">
+                <a href="#" class="nav-item nav-link">Trang chủ</a>
+                <a href="#" class="nav-item nav-link">Đoàn thể</a>
+                <a href="#" class="nav-item nav-link">Sự kiện</a>
+                <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown">Hoạt động</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal">Đăng kí</a>
+                    <a href="#" class="dropdown-item">Tham gia</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header flex-column ">
+                        <div class="col-12">
+                            <button id="btnClose" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="col-12">
+                            <h3 class="text-danger text-center">THÔNG TIN ĐĂNG KÍ</h3>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form id="myForm">
+                            <div id="msgErr" class="alert alert-danger d-none"></div>
+                            <div class="form-group">
+                                <label for="txtMa"><b>Mã sinh viên</b></label>
+                                <input type="text" id="txtMa" class="form-control" required>
+                                <p class="text-danger">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtTen"><b>Họ tên</b></label>
+                                <input type="text" id="txtTen" class="form-control" required>
+                                <p class="text-danger">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtNgay"><b>Ngày tham gia</b></label>
+                                <input type="date" id="txtNgay" class="form-control" required>
+                                <p class="text-danger">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtEmail"><b>Email</b></label>
+                                <input type="email" id="txtEmail" class="form-control" required>
+                                <p class="text-danger">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtSDT"><b>Số điện thoại</b></label>
+                                <input type="text" id="txtSDT" class="form-control" required>
+                                <p class="text-danger">*</p>
+                            </div>
+                            <button id="btnSubmit" type="submit" class="btn btn-danger w-100">LƯU</button>
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <img src="../images/ngayhoithanhnien.JPG" alt="" class="rounded-circle" srcset="">
+            </div>
+            <div class="col-5">
+                <h5 class="text-warning">TIN NỔI BẬT</h5>
+                <ol type="i" class="table-info text-info">
+                    <li>Mùa hè xanh</li>
+                    <li>Thanh niên tình nguyện</li>
+                    <li>Tấm lòng vàng</li>
+                    <li>Hiến máu nhân đạo</li>
+                    <li>Bảo vệ môi trường sạch</li>
+                    <li>Thi đua lập thành tích chào mừng 26/3</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center" >
+            <h4 class="text-warning">DANH SÁCH ĐĂNG KÍ HOẠT ĐỘNG MÙA HÈ XANH</h4>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <th>STT</th>
+                    <th>Mã SV</th>
+                    <th>Tên SV</th>
+                    <th>Ngày tham gia</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                </thead>
+                <tbody id="dataModel">
+                    
+                </tbody>
+            </table>
+
+        </div>
+        <div class="row bg-info d-flex justify-content-end pt-4">
+            <p class="text-white mb-0">@ 2020-2021 Đoàn thanh niên - Trường đại học công nghiệp TP Hồ Chí Minh</p>
+        </div>
+    </div>
+</body>
+</html>
