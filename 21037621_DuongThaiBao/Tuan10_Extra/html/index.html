@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <style>
+        [class*="col-"]{
+            padding:0;
+        }
+    </style>
+    <title>Dương Thái Bảo - 21037621</title>
+</head>
+<body>
+    <div class="container border">
+        <div class="row bg-warning">
+<div class="nav d-flex align-items-center  ">
+    <div class="nav-brand">
+        <img src="../img/logo7.png" alt="" srcset="">
+    </div>
+    <a href="#" class="nav-item nav-link">Trang chủ</a>
+    <a href="#" class="nav-item nav-link">Giới thiệu</a>
+    <a href="#" class="nav-item nav-link">Dịch vụ</a>
+    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#modal">Kí gửi hàng hoá</a>
+    <a href="#" class="nav-item nav-link">Liên hệ</a>
+</div>
+        </div>
+        
+
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form id="form">
+                        <div class="modal-header border">
+                            <h5>Thông tin kiện hàng hoá gửi</h5>
+                        </div>
+                        <div class="modal-body p-2">
+                            <div class="form-check">
+                                <div class="row">
+                                    <div class="col-4"><label for="txtSerial">Số serial:</label></div>
+                                    <div class="col-7"><input class="form-control"id="txtSerial" type="text">
+                                    <p  id="errSerial"  class="text-danger"><i>Số serial in trên kiện hàng nếu có.</i></p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="txtDes">Mô tả kiện hàng:</label></div>
+                                    <div class="col-7"><input class="form-control" id="txtDes" type="text">
+                                        <p id="errDes" class="text-danger"><i>*</i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="fileImage">Hình ảnh:</label></div>
+                                    <div class="col-7"><input id="fileImage" type="file">
+                                        <p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="txtKg">Trọng lượng:</label></div>
+                                    <div class="col-7"><input onchange="calcChiPhi();" class="form-control" id="txtKg" type="text">
+                                        <p id="errKg" class="text-danger"><i>*</i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="txtChiPhi">Chi phí vận chuyển (VND):</label></div>
+                                    <div class="col-7"><input disabled class="form-control" id="txtChiPhi" type="text">
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <button class="btn btn-outline-primary" type="submit">Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-0 border">
+            <div class="col-9">
+                <p>Form</p>
+            </div>
+            <div class="col-3 bg-light p-0">
+                <h5>Quy định thanh toán</h5>
+                <il>
+                    <li>Khách cọc từ 70% - 100% số tiền của đơn hàng.</li>
+                    <li>Hàng về sau 24-48 tiếng kể từ khi kho Trung Quốc ký nhận.</li>
+                    <li>Shop sẽ thanh lý đơn hàng nếu sau 1 tuần khách hàng không thanh toán tiền nhận hàng.</li>
+                </il>
+            </div>
+        </div>
+        <div class="row border p-2">
+            <h5 class="text-primary">Danh sách kiện hàng hóa gửi</h5>
+            <table class="table border table-striped">
+                <thead>
+                    <th>STT</th>
+                    <th>Số serial</th>
+                    <th>Mô tả kiện hàng</th>
+                    <th>Hình ảnh</th>
+                    <th>Trọng lượng (kg)</th>
+                    <th>Phí vận chuyển (VND)</th>
+                </thead>
+                <tbody id="tblData">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row bg-warning d-flex justify-content-center">
+            <p class="text-primary pt-3">Mã số: 21037621 - Họ tên: Dương Thái Bảo</p>
+        </div>
+    </div>
+    
+</body>
+</html>

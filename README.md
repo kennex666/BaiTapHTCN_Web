@@ -13,4 +13,6 @@ Nơi lưu trữ bài tập Hệ thống công nghệ Web
 * [Week 6 - Stop watch](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan06/stopwatch.html)
 * [Week 7](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan07)
 * [Week 8](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan08)
+* [Week 9](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan09_Extra/html)
+* [Week 10](https://bao.1boxstudios.com/BaiTapHTCN_Web/21037621_DuongThaiBao/Tuan10_Extra/html)
 
