@@ -1,5 +1,5 @@
 # Stogare Study Case
-Nơi lưu trữ bài tập Hệ thống công nghệ Web
+Nơi lưu trữ bài tập Hệ thống công nghệ Web [2023]
 
 # Information
 * Giảng viên hướng dẫn: TS Nguyễn Trọng Tiến
