@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <title>Dương Thái Bảo - 21037621</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <img width="100%" src="../image/logo175.png" alt="" srcset="">
+        </div>
+        <div class="row bg-info">
+            <div class="nav">
+                <a href="#" class="nav-item nav-link text-white">Trang chủ</a>
+                <a href="#" class="nav-item nav-link text-white">Giới thiệu</a>
+                <a href="#" class="nav-item nav-link text-white">Chuyên khoa</a>
+                <button data-toggle="modal" data-target="#modal" class="nav-item btn btn-success">Đăng kí khám bệnh</a>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-flex flex-row">
+                        <h4>THÔNG TIN BỆNH NHÂN ĐĂNG KÝ</h4>
+                        <div class="close" data-dismiss="modal">&times;</div>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form">
+                        
+                        <div class="row">
+                            <div class="form-group pl-3">
+                                <input name="chkOption" id="chkNoiTru" type="radio" checked> Nội trú
+                                <input name="chkOption" id="chkNgoaiTru" type="radio"> Ngoại trú
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="txtMaThe">Mã thẻ bảo hiểm</label>
+                                <input id="txtMaThe" type="text" class="form-control">
+                                <p class="text-danger" id="errMaThe"><i>(*)</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="txtHoTen">Họ tên</label>
+                                <input id="txtHoTen" type="text" class="form-control">
+                                <p class="text-danger" id="errHoTen"><i>(*)</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="txtTuoi">Tuổi</label>
+                                <input id="txtTuoi" type="text" class="form-control">
+                                <p class="text-danger" id="errTuoi"><i>(*)</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="txtSDT">Số điện thoại</label>
+                                <input id="txtSDT" type="text" class="form-control">
+                                <p class="text-danger" id="errSDT"><i>(*)</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="txtDiaChi">Địa chỉ</label>
+                                <input id="txtDiaChi" type="text" class="form-control">
+                                <p class="text-danger" id="errDiaChi"><i>(*)</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group pl-4">
+                                <input id="chkYC" type="checkbox"> Bác sĩ theo yêu cầu
+                                <input id="chkCC" type="checkbox"> Phòng dịch vụ cao cấp
+                                <input id="chkTN" type="checkbox"> Trả kết quả tại nhà
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <p>Đối tượng Khám bệnh</p>
+                                <select class="form-control" id="sltDoiTuong">
+                                    <option value="1">Quân nhân</option>
+                                    <option value="2">Cán bộ</option>
+                                    <option value="3">CD</option>
+                                </select>
+                            </div></div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="txtTiLeTT">Tỉ lệ thanh toán</label>
+                                <input id="txtTiLeTT" type="text" class="form-control" value="40%" disabled>
+                                <p class="text-danger" id="errtiLeTT"><i>(*)</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-info">Đăng ký</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row justify-content-end pr-2">
+                            <b>21037621 - Dương Thái Bảo - DHKTPM17B</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center pt-4">
+            <h4>DANH SÁCH ĐĂNG KÝ KHÁM BỆNH TRỰC TUYẾN</h4>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <th>STT</th>
+                    <th>Hình thức</th>
+                    <th>Mã thẻ Bảo hiểm</th>
+                    <th>Họ tên</th>
+                    <th>Tuổi</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Dịch vụ</th>
+                    <th>Tỉ lệ thanh toán</th>
+                </thead>
+                <tbody id="tblData"></tbody>
+            </table>
+        </div>
+        <div class="row d-flex justify-content-end">
+            <p><b>Tổng số: </b><b><span class="text-danger" id="numberData">00</span></b></p>
+
+        </div>
+        <div class="row bg-info">
+            <p class="text-white pt-3 pl-2">21037621 - Dương Thái Bảo - DHKTPM17B</p>
+        </div>
+    </div>
+   
+</body>
+</html>
